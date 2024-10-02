@@ -35,7 +35,8 @@ public class PlayerControlsXX : MonoBehaviour
         //check the player is pressing space//
         if(Input.GetKeyDown(KeyCode.Space))
         { 
-                //launch projectile from the player//
+       //launch projectile from the player//
+        Instantiate(progectilePrefab, transform.position, progectilePrefab.transform.rotation);
         }
     }
 }
