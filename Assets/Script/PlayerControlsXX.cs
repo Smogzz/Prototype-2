@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControlsXX : MonoBehaviour
 {
     float horizontalInput;
-    public float xRange = 10;
+    public float xRange = 23;
     public float speed = 15;
     public GameObject progectilePrefab;
 
@@ -35,8 +35,8 @@ public class PlayerControlsXX : MonoBehaviour
         //check the player is pressing space//
         if(Input.GetKeyDown(KeyCode.Space))
         { 
-       //launch projectile from the player//
-        Instantiate(progectilePrefab, transform.position, progectilePrefab.transform.rotation);
+        //launch projectile from the player//
+            Instantiate(progectilePrefab, transform.position, progectilePrefab.transform.rotation);
         }
     }
 }
