@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControlsXX : MonoBehaviour
 {
     float horizontalInput;
+    float verticalInput;
     public float xRange = 23;
     public float speed = 15;
     public GameObject progectilePrefab;
@@ -20,7 +21,9 @@ public class PlayerControlsXX : MonoBehaviour
     {
         //get the players horizontal input//
         horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
         //Keep the player at xrange left//
         if(transform.position.x < - xRange)
         {
